@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рязань - Жалобы и обращения</title>
+
+    <link rel="stylesheet" href="../css/complaints-and-appeals.css">
+    <link rel="stylesheet" href="../css/again-use-css/header.css">
+    <link rel="stylesheet" href="../css/again-use-css/footer.css">
+    <link rel="stylesheet" href="../css/again-use-css/reset.css">
+    <link rel="stylesheet" href="../css/again-use-css/fonts.css">
+    <link rel="stylesheet" href="../css/again-use-css/main-classes.css">
+    <link rel="stylesheet" href="../css/again-use-css/path.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="header__logo-block">
+                <a href="../html/index.html" class="logo-block__a"><img src="../img/logo-colored.svg" alt=""></a>
+                <div class="logo-block__vertical-line"></div>
+                <h1 class="logo-block__h1">Наименование</h1>
+            </div>
+            <div class="header__nav">
+                <a href="../html/about-project.html" class="nav__a">О проекте</a>
+                <div class="dropdown__content" id="dropdown__content">
+                    <button class="content__btn btn">Написать в техподдержку</button>
+                    <button class="content__btn btn">Вопросы и ответы</button>
+                    <button class="content__btn btn">Пользовательское соглашение</button>
+                </div>
+                <button class="dropdown__btn" id="dropdown__btn">
+                    Помощь
+                    <img src="../img/chevron.svg" alt=""  class="dropdown__img" id="dropdown__img">
+                </button>
+                <button class="nav__btn btn">
+                    <img src="../img/enter-gosuslugi.svg" alt="" style="margin-right: 8px;">
+                    Войти
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="section-path">
+            <div class="container section-path__container">
+                <div class="section-path__block">
+                    <img src="../img/section-svg.svg" alt="" class="section-path__img">
+                    <p class="section-path__slash section-path__p">/</p>
+                    <h3 class="section-path__p">Обращения</h3>
+                </div>
+            </div>
+        </section>
+        <section class="main-header">
+            <div class="container main-header__container">
+                <div class="main-header__main-block">
+                    <div class="main-header__text-block">
+                        <h1 class="main-header__h1">Обращения</h1>
+                        <p class="main-header__p">Небольшое описание буквально в несколько предложений,
+                        <br> занимающие не более трех строк.
+                    </p>
+                    </div>
+                    <button class="main-header__btn btn">Сообщить о проблеме</button>
+                </div>
+                <div class="main-header__filter-block">
+                    <div class="main-header__filters">
+                        <button class="main-header__filter-btn btn btn-active">Все 11 453</button>       
+                        <button class="main-header__filter-btn btn">В ожидании 1 015</button>    
+                        <button class="main-header__filter-btn btn">В работе 1 580</button>
+                        <button class="main-header__filter-btn btn">Исполнено 3 305</button>
+                    </div>
+                    <button class="main-header__filter-btn btn" id="main-dropdown-btn">Фильтр <img src="../img/filter-svg.svg" alt="" class="filter-btn__img"></button>
+                </div>
+                <div class="main-header__dropdown-content" id="main-dropdown-content">
+                    <input type="text" class="dropdown-content__input dropdown-content__text" placeholder="Поиск по номеру" style="grid-column: 1 / 3;">
+                    <button class="dropdown-content__btn dropdown-content__text" style="grid-column: 3 / 7;" id="secondary-dropdown-btn-1" value="Выберите категорию">Выберите категорию <img src="../img/chevron-2.svg" alt=""></button>
+                    <button class="dropdown-content__btn dropdown-content__text" style="grid-column: 7 / 8;" id="secondary-dropdown-btn-2" value="10">10 <img src="../img/chevron-2.svg" alt=""></button>
+                    <button class="dropdown-content__btn dropdown-content__text" style="grid-column: 8 / 10;" id="secondary-dropdown-btn-3" value="за 6 месяцев">за 6 месяцев <img src="../img/chevron-2.svg" alt=""></button>
+                </div>
+                <div class="main-header__dropdown-content">
+                    <div class="dropdown-content__select-block" style="grid-column: 3 / 7;" id="secondary-dropdown-content-1">
+                        <button class="btn dropdown-content__select-btn">Выберите категорию</button> 
+                        <button class="btn dropdown-content__select-btn" >Дворовая территория</button>
+                        <button class="btn dropdown-content__select-btn">2</button>
+                        <button class="btn dropdown-content__select-btn">2</button>
+                    </div>
+                    <div class="dropdown-content__select-block" style="grid-column: 7 / 8;" id="secondary-dropdown-content-2">
+                        <button class="btn dropdown-content__select-btn">10</button>
+                        <button class="btn dropdown-content__select-btn">20</button>
+                        <button class="btn dropdown-content__select-btn">30</button>
+                    </div>
+                    <div class="dropdown-content__select-block" style="grid-column: 8 / 10;" id="secondary-dropdown-content-3">
+                        <button class="btn dropdown-content__select-btn">за 6 месяцев</button>
+                        <button class="btn dropdown-content__select-btn">за 1 месяц</button>
+                        <button class="btn dropdown-content__select-btn">за 12 месяцев</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-content">
+            <div class="main-content__container container">
+                <div class="main-content__elems">
+                    <div class="main-content__element">
+                        <div class="element__main-block">
+                            <div class="element__indicators">
+                                <p class="element__number indicator">№2340</p>
+                                <p class="element__class indicator">В ожидании</p>
+                            </div>
+                            <div class="element__text-block">
+                                <h1 class="text-block__h1">С контейнерной площадки не вывозится крупногабаритный <br> мусор</h1>
+                                <p class="text-block__p">
+                                    Просим разобраться с данным тарифом на горячую воду. данный тариф очень высокий.
+                                    215.96 — это ГВС (Подогрев) (5 разр.) + в водоканал платеж за воду 29.32.
+                                    Итого за 1 куб гор. воды оплата 245,28 руб. У нас своя котельная. Ранее куб горячей воды стоил 179 руб. 
+                                    Почему сейчас вода подорожала почти на 40%? Просим разобраться с даннымтарифом и повлиять на его уменьшение. Кому бы..
+                                </p>
+                            </div>
+                            <div class="element__img-block">
+                                <div class="img-block__images">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                </div>
+                                <div class="img-block__btn-block">
+                                    <div class="img-block__btn scroll-btn-1 d-none opacity-0">
+                                        <div class="img-block__decorative-btn">
+                                            <img src="../img/chevron-2.svg" alt="" class="">
+                                        </div>
+                                    </div>
+                                    <div class="img-block__btn scroll-btn-2">
+                                        <div class="img-block__decorative-btn">
+                                            <img src="../img/chevron-2.svg" alt="" class="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="element__btn btn"">Подробнее</button>
+                        </div>
+                        <div class="element__secondary-block">
+                            <div class="secondary-block__action-block">
+                                <div class="action-block__info">
+                                    <div class="action-block__text-block">
+                                        <h1 class="action-block__h1">5 626</h1>
+                                        <p class="action-block__p">Подержали данное <br> обращение</p>
+                                    </div>
+                                    <button class="action-block__btn btn">
+                                        <img src="../img/more-vertical.svg" alt="">
+                                    </button>
+                                </div>
+                                <div class="action-block__btn-block">
+                                    <button class="btn-block__main-btn btn">Присоединиться</button>
+                                    <button class="btn-block__secondary-btn btn">
+                                        <img src="../img/help-circle.svg" alt="">
+                                    </button>
+                                    <button class="btn-block__secondary-btn btn">
+                                        <img src="../img/share.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="secondary-block__info-block">
+                                <div class="info-block__main-block">
+                                    <div class="info-block__text-block">
+                                        <h1 class="info-block__h1">КАТЕГОРИЯ</h1>
+                                        <p class="info-block__p">Дворовая территория</p>
+                                    </div>
+                                    <div class="info-block__text-block">
+                                        <h1 class="info-block__h1">АВТОР</h1>
+                                        <p class="info-block__p">Анастасия</p>
+                                    </div>
+                                    <div class="info-block__text-block">
+                                        <h1 class="info-block__h1">ОПУБЛИКОВАНО</h1>
+                                        <p class="info-block__p">20.08.2022, 122:224</p>
+                                    </div>
+                                </div>
+                                <div class="info-block__secondary-block">
+                                    <div class="info-block__text-block">
+                                        <h1 class="info-block__h1">АДРЕС</h1>
+                                        <p class="info-block__p">ул. Ленинского комсомола д.34 к.1</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-content__element">
+                        <div class="element__main-block">
+                            <div class="element__indicators">
+                                <p class="element__number indicator">№2340</p>
+                                <p class="element__class indicator">В ожидании</p>
+                            </div>
+                            <div class="element__text-block">
+                                <h1 class="text-block__h1">С контейнерной площадки не вывозится крупногабаритный <br> мусор</h1>
+                                <p class="text-block__p">
+                                    Просим разобраться с данным тарифом на горячую воду. данный тариф очень высокий.
+                                    215.96 — это ГВС (Подогрев) (5 разр.) + в водоканал платеж за воду 29.32.
+                                    Итого за 1 куб гор. воды оплата 245,28 руб. У нас своя котельная. Ранее куб горячей воды стоил 179 руб. 
+                                    Почему сейчас вода подорожала почти на 40%? Просим разобраться с даннымтарифом и повлиять на его уменьшение. Кому бы..
+                                </p>
+                            </div>
+                            <div class="element__img-block">
+                                <div class="img-block__images">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                </div>
+                                <div class="img-block__btn-block">
+                                    <div class="img-block__btn scroll-btn-1 d-none opacity-0">
+                                        <div class="img-block__decorative-btn">
+                                            <img src="../img/chevron-2.svg" alt="" class="">
+                                        </div>
+                                    </div>
+                                    <div class="img-block__btn scroll-btn-2">
+                                        <div class="img-block__decorative-btn">
+                                            <img src="../img/chevron-2.svg" alt="" class="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="element__btn btn"">Подробнее</button>
+                        </div>
+                        <div class="element__secondary-block">
+                            <div class="secondary-block__action-block">
+                                <div class="action-block__info">
+                                    <div class="action-block__text-block">
+                                        <h1 class="action-block__h1">5 626</h1>
+                                        <p class="action-block__p">Подержали данное <br> обращение</p>
+                                    </div>
+                                    <button class="action-block__btn btn">
+                                        <img src="../img/more-vertical.svg" alt="">
+                                    </button>
+                                </div>
+                                <div class="action-block__btn-block">
+                                    <button class="btn-block__main-btn btn">Присоединиться</button>
+                                    <button class="btn-block__secondary-btn btn">
+                                        <img src="../img/help-circle.svg" alt="">
+                                    </button>
+                                    <button class="btn-block__secondary-btn btn">
+                                        <img src="../img/share.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="secondary-block__info-block">
+                                <div class="info-block__main-block">
+                                    <div class="info-block__text-block">
+                                        <h1 class="info-block__h1">КАТЕГОРИЯ</h1>
+                                        <p class="info-block__p">Дворовая территория</p>
+                                    </div>
+                                    <div class="info-block__text-block">
+                                        <h1 class="info-block__h1">АВТОР</h1>
+                                        <p class="info-block__p">Анастасия</p>
+                                    </div>
+                                    <div class="info-block__text-block">
+                                        <h1 class="info-block__h1">ОПУБЛИКОВАНО</h1>
+                                        <p class="info-block__p">20.08.2022, 122:224</p>
+                                    </div>
+                                </div>
+                                <div class="info-block__secondary-block">
+                                    <div class="info-block__text-block">
+                                        <h1 class="info-block__h1">АДРЕС</h1>
+                                        <p class="info-block__p">ул. Ленинского комсомола д.34 к.1</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-content__element">
+                        <div class="element__main-block">
+                            <div class="element__indicators">
+                                <p class="element__number indicator">№2340</p>
+                                <p class="element__class indicator">В ожидании</p>
+                            </div>
+                            <div class="element__text-block">
+                                <h1 class="text-block__h1">С контейнерной площадки не вывозится крупногабаритный <br> мусор</h1>
+                                <p class="text-block__p">
+                                    Просим разобраться с данным тарифом на горячую воду. данный тариф очень высокий.
+                                    215.96 — это ГВС (Подогрев) (5 разр.) + в водоканал платеж за воду 29.32.
+                                    Итого за 1 куб гор. воды оплата 245,28 руб. У нас своя котельная. Ранее куб горячей воды стоил 179 руб. 
+                                    Почему сейчас вода подорожала почти на 40%? Просим разобраться с даннымтарифом и повлиять на его уменьшение. Кому бы..
+                                </p>
+                            </div>
+                            <div class="element__img-block">
+                                <div class="img-block__images">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                    <img src="../img/element-img.png" alt="" class="img-block__img">
+                                </div>
+                                <div class="img-block__btn-block">
+                                    <div class="img-block__btn scroll-btn-1 d-none opacity-0">
+                                        <div class="img-block__decorative-btn">
+                                            <img src="../img/chevron-2.svg" alt="" class="">
+                                        </div>
+                                    </div>
+                                    <div class="img-block__btn scroll-btn-2">
+                                        <div class="img-block__decorative-btn">
+                                            <img src="../img/chevron-2.svg" alt="" class="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="element__btn btn"">Подробнее</button>
+                        </div>
+                        <div class="element__secondary-block">
+                            <div class="secondary-block__action-block">
+                                <div class="action-block__info">
+                                    <div class="action-block__text-block">
+                                        <h1 class="action-block__h1">5 626</h1>
+                                        <p class="action-block__p">Подержали данное <br> обращение</p>
+                                    </div>
+                                    <button class="action-block__btn btn">
+                                        <img src="../img/more-vertical.svg" alt="">
+                                    </button>
+                                </div>
+                                <div class="action-block__btn-block">
+                                    <button class="btn-block__main-btn btn">Присоединиться</button>
+                                    <button class="btn-block__secondary-btn btn">
+                                        <img src="../img/help-circle.svg" alt="">
+                                    </button>
+                                    <button class="btn-block__secondary-btn btn">
+                                        <img src="../img/share.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="secondary-block__info-block">
+                                <div class="info-block__main-block">
+                                    <div class="info-block__text-block">
+                                        <h1 class="info-block__h1">КАТЕГОРИЯ</h1>
+                                        <p class="info-block__p">Дворовая территория</p>
+                                    </div>
+                                    <div class="info-block__text-block">
+                                        <h1 class="info-block__h1">АВТОР</h1>
+                                        <p class="info-block__p">Анастасия</p>
+                                    </div>
+                                    <div class="info-block__text-block">
+                                        <h1 class="info-block__h1">ОПУБЛИКОВАНО</h1>
+                                        <p class="info-block__p">20.08.2022, 122:224</p>
+                                    </div>
+                                </div>
+                                <div class="info-block__secondary-block">
+                                    <div class="info-block__text-block">
+                                        <h1 class="info-block__h1">АДРЕС</h1>
+                                        <p class="info-block__p">ул. Ленинского комсомола д.34 к.1</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content__page-btns">
+                    <button class="btn page-btns__side-btn page-btns__btn">
+                        <img src="../img/chevron-2.svg" alt="">
+                    </button>
+
+                    <div class="page-btns__main-btns">
+                        <button class="btn page-btns__main-btn page-btns__btn btn-active">1</button>
+                        <button class="btn page-btns__main-btn page-btns__btn">2</button>
+                        <button class="btn page-btns__main-btn page-btns__btn">3</button>
+                        <button class="btn page-btns__main-btn page-btns__btn">4</button>
+                        <button class="btn page-btns__main-btn page-btns__btn">...</button>
+                        <button class="btn page-btns__main-btn page-btns__btn">56</button>
+                    </div>
+
+                    <button class="btn page-btns__side-btn page-btns__btn">
+                        <img src="../img/chevron-2.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__main-content">
+                <div class="main-content__logo-block">
+                    <a href="../html/index.html" class="logo-block__a"><img src="../img/logo-dark.svg" alt=""></a>
+                    <h2 class="main-content__h2 logo-block__h2">Информационная экосистема Рязанской области —  Наш Дом Рязань</h2>
+                </div>
+                <div class="main-content__elements">
+                    <div class="elements__block">
+                        <h2 class="main-content__h2 block__h2">Разделы сайта</h2>
+                        <div class="block__elements">
+                            <div class="elements__element">
+                                <p class="block__p"><a href="">Управляющие организации дома</a></p>
+                                <p class="block__p"><a href="">Рейтинги и исполнители</a></p>
+                                <p class="block__p"><a href="">Жалобы и обращения</a></p>
+                                <p class="block__p"><a href="">Общественные обсуждения</a></p>
+                                <p class="block__p"><a href="">Опросы</a></p>
+                            </div>
+                            <div class="elements__element">
+                                <p class="block__p"><a href="">Реест организаций-партнеров</a></p>
+                                <p class="block__p"><a href="">Информация об УПЧ</a></p>
+                                <p class="block__p"><a href="">Запись к УПЧ</a></p>
+                                <p class="block__p"><a href="">Написать уполномоченному</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elements__block">
+                        <h2 class="main-content__h2 block__h2">Помощь</h2>
+                        <div class="block__elements">
+                            <div class="elements__element">
+                                <p class="block__p"><a href="">Написать в техподдержку</a></p>
+                                <p class="block__p"><a href="">Вопросы и ответы</a></p>
+                                <p class="block__p"><a href="">Пользовательское соглашение</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__line"></div>
+            <div class="footer__copyright">
+                <div class="copyright__text">
+                    <p class="text__p">
+                        Copyright © 2022 Nash Dom Inc. 
+                        <br>
+                        All rights reserved.
+                    </p>
+                </div>
+                <div class="copyright__download">
+                    <a href="" class="download__a"><img src="../img/download-AppStore-img.png" alt="" class="download__img"></a>
+                    <a href="" class="download__a"><img src="../img/download-GooglePlay-img.png" alt="" class="download__img"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab6a6f6f7590053d8405383728f9b2ffe488c58fb02bc3a21f4f73bd120de228e&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+    --><script src="../js/complaints-and-appeals.js" defer></script>
+    <script src="../js/header.js" defer></script>
+</body>
+</html>

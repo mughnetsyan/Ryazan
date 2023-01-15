@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    scroll-behavior: smooth;
+
+    font-variant-numeric: lining-nums;
+
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+::-o-scrollbar {
+    width: 0;
+}
+::-moz-scrollbar {
+    width: 0;
+}
+::-ms-scrollbar {
+    width: 0;
+}

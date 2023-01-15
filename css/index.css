@@ -1,0 +1,158 @@
+body {
+    background: #F6F6F6;
+}
+
+/*! Header */
+
+/*! Main  */
+
+/*! Grid Elements  */
+.main {
+    margin-bottom: 40px;
+}
+.grid-blocks {
+    margin-top: 136px;
+}
+
+.grid-blocks__container {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-top: 15px;
+}
+
+.grid-blocks__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    background: #fff;
+
+    padding: 24px;
+}
+.grid-blocks__main-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    grid-column: 1 / 4;
+
+    border-radius: 12px;
+    background: #ffcc33;
+    
+    padding: 0 80px 0 24px;
+}
+
+.grid-blocks__secondary-block {
+    grid-column: 1 / 3;
+    position: relative;
+}
+
+.block__text-block { }
+
+.text-block__h1 {
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+
+    margin-bottom: 12px;
+}
+.text-block__main-h1 {
+    max-width: 600px;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+.text-block__secondary-h1 {
+    font-size: 24px;
+}
+.text-block__p {
+    max-width: 300px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+
+    color: #000000;
+
+    opacity: 0.6;
+}
+.text-block__main-p {
+    max-width: 500px;
+}
+.text-block__btn {
+    transition: .1s;
+
+    margin-top: 24px;
+    padding: 12px 24px;
+}
+.text-block__main-btn {
+    background: #fff;
+}
+.text-block__main-btn:hover {
+    background: #F6F6F6;
+}
+.text-block__secondary-btn {
+    background: #ffcc33;
+}
+
+.block__images { }
+
+.images__img {
+    display: none;
+    transition: .4s;
+}
+
+.block__img {
+    align-self: flex-end;
+    position: absolute;
+    right: 56px;
+}
+.text-block__img {
+    margin-bottom: 16px;
+}
+
+/*! Statistics */
+.statistics {
+    margin-top: -180px;
+}
+.statistics__container {
+    display: flex;
+    flex-direction: column;
+}
+.statistics__img {
+    margin-bottom: 64px;
+    margin-right: 90px;
+    align-self: flex-end;
+}
+.statistics__block {
+    border-radius: 12px;
+    background: #ffcc33;
+    
+    padding: 56px 60px;
+}
+.block__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.info__element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.element__h1 {
+    font-size: 40px;
+    font-weight: 400;
+}
+.element__p {
+    font-size: 16px;
+    
+    opacity: .6;
+}
+
+/*! Footer */

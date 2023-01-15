@@ -1,0 +1,290 @@
+body {
+    background: #f6f6f6;
+}
+.main {
+    margin-top: 96px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 40px 0 80px 0;
+}
+.main-content__container {
+    display: flex;
+    flex-direction: column;
+
+    background: #FFFFFF;
+    box-shadow: 0px 8px 24px -6px rgba(59, 69, 75, 0.08);
+    border-radius: 12px;
+
+    padding: 32px 32px 16px;
+}
+.main-content__h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+    /* or 38px */
+
+    letter-spacing: 0.02em;
+
+    color: #000000;
+
+    margin-bottom: 24px;
+}
+.main-content__form {
+
+}
+.form__item {
+    margin-bottom: 24px;
+}
+#downloaded-files {
+    transition: .3s;
+}
+.form__item:last-child {
+    margin-bottom: 0;
+}
+.form__p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 8px;
+
+    letter-spacing: 0.06em;
+
+    color: rgba(27, 20, 0, 0.4);
+
+    margin-bottom: 8px;
+}
+.mb-12 {
+    margin-bottom: 12px;
+}
+
+.form__btn-block {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.btn__img {
+    position: absolute;
+
+    user-select: none;
+
+    right: 16px;
+}
+
+.form__input, .form__btn {
+    width: 100%;
+
+    background: #F6F6F6;
+
+    border: 0.5px solid rgba(27, 20, 0, 0.08) !important;
+    border-radius: 8px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+
+    text-align: left;
+
+
+    color: rgba(0, 0, 0, 0.4) !important;
+
+    padding: 14px 16px;
+}
+.form__btn {
+    cursor: pointer;
+}
+.form__input::placeholder {
+    color: rgba(0, 0, 0, 0.4) !important;
+}
+.form__textarea {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    resize: vertical;
+}
+.form__images {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.images__main-img {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    
+    border-radius: 8px;
+
+    box-shadow: 0px 0px 15px 0px rgba(34, 60, 80, 0.2);
+}
+.images__element {
+    width: 100%;
+    padding-top: 100%;
+    background-color: black;
+    position: relative;
+    
+    transition: .2s;
+
+    border-radius: 50%;
+    border: none;
+    outline: none;
+
+}
+.images__delete-btn {
+    position: absolute;
+
+    top: 8px;
+    right: 8px;
+
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50% !important;
+    background: #FFFFFF;
+
+    box-shadow: 0px 0px 15px 0px rgba(34, 60, 80, 0.2);
+}
+.images__delete-img {
+}
+.form__files {
+    margin-bottom: 24px;
+}
+.form__file {
+    height: 56px;
+    width: calc(100% + 2 * 32px);
+
+    display: flex;
+    align-items: center;
+
+    background: #F6F6F6;
+
+    transition: .3s;
+
+    transform: translateX(-50%);
+    margin-left: 50%;
+
+    padding: 8px 24px;
+}
+
+.file__main-img {
+}
+.file__info {
+    margin-left: 10px;
+}
+.file__h1 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+
+    color: #1B1400;
+
+    margin-bottom: 2px;
+}
+.file__details {
+    display: flex;
+    align-items: center;
+}
+.file__p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    letter-spacing: 0.02em;
+
+    color: #1B1400;
+
+    opacity: 0.4;
+}
+.file__spacer {
+    width: 2px;
+    height: 2px;
+
+    background: rgba(27, 20, 0, 0.4);
+
+    border-radius: 50%;
+
+    margin: 0 12px;
+}
+.file__delete-btn {
+    background: transparent;
+    border-radius: 0 !important;
+
+    position: absolute;
+    right: 24px;
+}
+
+.form__file-input {
+
+}
+.form__label {
+    display: inline-flex;
+
+    background: #F6F6F6;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    padding: 4px 12px 4px 8px;
+}
+
+.form__label:hover {
+    background: #ffcc33;
+}
+
+.file-input__img {
+}
+.file-input__span {
+    margin-left: 4px;
+}
+
+.main-content__btn {
+    align-self: flex-end;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+
+    background: #ffcc33;
+
+    color: #1B1400;
+
+    padding: 12px 24px;
+}
+.main-content__hr {
+    width: calc(100% + 2 * 32px);
+    height: .5px;
+
+    background:  rgba(196, 196, 196, 0.6);
+    border: none;
+
+    transform: translateX(-50%);
+
+    margin: 24px 0 16px 50%;
+}

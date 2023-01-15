@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рязань - Создать обращение</title>
+
+    <link rel="stylesheet" href="../css/create-appeal.css">
+    <link rel="stylesheet" href="../css/again-use-css/header.css">
+    <link rel="stylesheet" href="../css/again-use-css/footer.css">
+    <link rel="stylesheet" href="../css/again-use-css/reset.css">
+    <link rel="stylesheet" href="../css/again-use-css/fonts.css">
+    <link rel="stylesheet" href="../css/again-use-css/main-classes.css">
+    <link rel="stylesheet" href="../css/again-use-css/path.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="header__logo-block">
+                <a href="../html/index.html" class="logo-block__a"><img src="../img/logo-colored.svg" alt=""></a>
+                <div class="logo-block__vertical-line"></div>
+                <h1 class="logo-block__h1">Наименование</h1>
+            </div>
+            <div class="header__nav">
+                <a href="../html/about-project.html" class="nav__a">О проекте</a>
+                <div class="dropdown__content" id="dropdown__content">
+                    <button class="content__btn btn">Написать в техподдержку</button>
+                    <button class="content__btn btn">Вопросы и ответы</button>
+                    <button class="content__btn btn">Пользовательское соглашение</button>
+                </div>
+                <button class="dropdown__btn" id="dropdown__btn">
+                    Помощь
+                    <img src="../img/chevron.svg" alt=""  class="dropdown__img" id="dropdown__img">
+                </button>
+                <button class="nav__btn btn">
+                    <img src="../img/enter-gosuslugi.svg" alt="" style="margin-right: 8px;">
+                    Войти
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="section-path">
+            <div class="container section-path__container">
+                <div class="section-path__block">
+                    <img src="../img/section-svg.svg" alt="" class="section-path__img">
+                    <p class="section-path__slash section-path__p">/</p>
+                    <h3 class="section-path__p">Обращения</h3>
+                    <p class="section-path__slash section-path__p">/</p>
+                    <h3 class="section-path__p">Создать обращение</h3>
+                </div>
+            </div>
+        </section>
+        <section class="main-content">
+            <div class="main-content__container container">
+
+                <h1 class="main-content__h1">Создать обращение</h1>
+
+                <div class="main-content__form">
+                    <div class="form__item">
+                        <p class="form__p">АДРЕС</p>
+
+                        <!--TODO: Сделать эти кнопки ↓↓↓  -->
+
+                        <div class="form__btn-block">
+                            <button type="button" class="form__btn">Выберите адрес</button>
+                            <img src="../img/chevron-3.svg" class="btn__img" alt="">
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <p class="form__p">ТЕМА ОБРАЩЕНИЯ</p>
+                        <div class="form__btn-block">
+                            <button type="button" class="form__btn" contenteditable="true">Выберите тему обращения</button>
+                            <img src="../img/chevron-3.svg" class="btn__img" alt="">
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <p class="form__p">ЗАГОЛОВОК</p>
+                        <input type="text" class="form__input" id="form-input-3" placeholder="Введите заголовок обращения">
+                    </div>
+                    <div class="form__item">
+                        <p class="form__p">ОПИСАНИЕ</p>
+                        <textarea type="text" class="form__input form__textarea" placeholder="Введите описание обращения"></textarea>
+                    </div>
+                    <div class="form__item d-none opacity-0" id="downloaded-files">
+                        <!--! Сделать вставку файлов по перетаскиванию и по вставке (Ctrl+V) -->
+                        <p class="form__p mb-12">ЗАГРУЖЕННЫЕ ФАЙЛЫ</p>
+
+                        <!--? Example for form__images ↓↓↓-->
+                        <!--
+                            <div class="images__element">
+                                <img src="../img/form-img-1.png" alt="" class="images__main-img">
+                                <button class="btn images__delete-btn">
+                                    <img src="../img/cross.svg" alt="" class="images__delete-img">
+                                </button>
+                            </div> 
+                        -->
+
+                        <div class="form__images mb-20"></div>  
+
+                        <!--? Example for form__files ↓↓↓-->
+                        <!-- 
+                            <div class="form__file">
+                                <img src="../img/file.svg" alt="" class="file__main-img">
+                                <div class="file__info">
+                                    <h1 class="file__h1">Предложения по внесению изменений в систему землепользования.doc</h1>
+                                    <div class="file__details">
+                                        <p class="file__p">3.2 МБ</p>
+                                        <div class="file__spacer"></div>
+                                        <p class="file__p">28.11.2022</p>
+                                    </div>
+                                </div>
+                                <button class="btn file__delete-btn">
+                                    <img src="../img/cross-1.svg" alt="" class="file__delete-img">
+                                </button>
+                            </div> 
+                        -->
+
+                        <div class="form__files"></div>
+                    </div>
+                    <div class="form__item">
+                        <!-- ! Убрал multiple с input -->
+                        <input type="file" name="" id="file-input" class="form__file-input d-none">
+                        <label for="file-input" class="form__label">
+                            <img src="../img/add-file.svg" alt="" class="file-input__img">
+                            <span class="file-input__span">Прикрепить файл</span>
+                        </label>
+                    </div>
+                </div>
+
+                <hr class="main-content__hr">
+
+                <button class="btn main-content__btn">Ответить</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__main-content">
+                <div class="main-content__logo-block">
+                    <a href="../html/index.html" class="logo-block__a"><img src="../img/logo-dark.svg" alt=""></a>
+                    <h2 class="main-content__h2 logo-block__h2">Информационная экосистема Рязанской области —  Наш Дом Рязань</h2>
+                </div>
+                <div class="main-content__elements">
+                    <div class="elements__block">
+                        <h2 class="main-content__h2 block__h2">Разделы сайта</h2>
+                        <div class="block__elements">
+                            <div class="elements__element">
+                                <p class="block__p"><a href="">Управляющие организации дома</a></p>
+                                <p class="block__p"><a href="">Рейтинги и исполнители</a></p>
+                                <p class="block__p"><a href="">Жалобы и обращения</a></p>
+                                <p class="block__p"><a href="">Общественные обсуждения</a></p>
+                                <p class="block__p"><a href="">Опросы</a></p>
+                            </div>
+                            <div class="elements__element">
+                                <p class="block__p"><a href="">Реест организаций-партнеров</a></p>
+                                <p class="block__p"><a href="">Информация об УПЧ</a></p>
+                                <p class="block__p"><a href="">Запись к УПЧ</a></p>
+                                <p class="block__p"><a href="">Написать уполномоченному</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elements__block">
+                        <h2 class="main-content__h2 block__h2">Помощь</h2>
+                        <div class="block__elements">
+                            <div class="elements__element">
+                                <p class="block__p"><a href="">Написать в техподдержку</a></p>
+                                <p class="block__p"><a href="">Вопросы и ответы</a></p>
+                                <p class="block__p"><a href="">Пользовательское соглашение</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__line"></div>
+            <div class="footer__copyright">
+                <div class="copyright__text">
+                    <p class="text__p">
+                        Copyright © 2022 Nash Dom Inc. 
+                        <br>
+                        All rights reserved.
+                    </p>
+                </div>
+                <div class="copyright__download">
+                    <a href="" class="download__a"><img src="../img/download-AppStore-img.png" alt="" class="download__img"></a>
+                    <a href="" class="download__a"><img src="../img/download-GooglePlay-img.png" alt="" class="download__img"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/create-appeal.js" defer></script>
+    <script src="../js/header.js" defer></script>
+</body>
+</html>

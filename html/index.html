@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рязань - Главная</title>
+    
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/again-use-css/header.css">
+    <link rel="stylesheet" href="../css/again-use-css/footer.css">
+    <link rel="stylesheet" href="../css/again-use-css/reset.css">
+    <link rel="stylesheet" href="../css/again-use-css/fonts.css">
+    <link rel="stylesheet" href="../css/again-use-css/main-classes.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="header__logo-block">
+                <a href="../html/index.html" class="logo-block__a"><img src="../img/logo-colored.svg" alt=""></a>
+                <div class="logo-block__vertical-line"></div>
+                <h1 class="logo-block__h1">Наименование</h1>
+            </div>
+            <div class="header__nav">
+                <a href="../html/about-project.html" class="nav__a">О проекте</a>
+                <div class="dropdown__content" id="dropdown__content">
+                    <button class="content__btn btn">Написать в техподдержку</button>
+                    <button class="content__btn btn">Вопросы и ответы</button>
+                    <button class="content__btn btn">Пользовательское соглашение</button>
+                </div>
+                <button class="dropdown__btn" id="dropdown__btn">
+                    Помощь
+                    <img src="../img/chevron.svg" alt=""  class="dropdown__img" id="dropdown__img">
+                </button>
+                <button class="nav__btn btn">
+                    <img src="../img/enter-gosuslugi.svg" alt="" style="margin-right: 8px;">
+                    Войти
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="grid-blocks">
+            <div class="container grid-blocks__container">
+                <div class="grid-blocks__main-block">
+                    <div class="block__text-block">
+                        <h1 class="text-block__h1 text-block__main-h1">Сообщайте о проблемах и контролируйте ход их исправления!</h1>
+                        <p class="text-block__p text-block__main-p">Небольшое описание буквально в несколько предложений, занимающие не более трех строк.</p>
+                        <button class="text-block__btn text-block__main-btn btn">Сообщить о проблеме</button>
+                    </div>
+                    <div class="block__images">
+                        <img class="images__img" src="../img/main-block-img-1.png" style="margin: 16px 0 24px 0;">
+                        <img class="images__img" src="../img/main-block-img-2.png" style="margin: 24px 0 24px 0;">
+                        <img class="images__img" src="../img/main-block-img-3.png" style="margin: 24px 0 24px 0;">
+                        <img class="images__img" src="../img/main-block-img-4.png" style="margin-top: 32px;">
+                        <img class="images__img" src="../img/main-block-img-5.png" style="margin: 24px 0 24px 0;">
+                        <img class="images__img" src="../img/main-block-img-6.png" style="margin-top: 24px;">
+                    </div>
+                </div>
+                <div class="grid-blocks__block grid-blocks__secondary-block">
+                    <div class="block__text-block">
+                        <img src="../img/block-svg-1.svg" alt="" class="text-block__img">
+                        <h1 class="text-block__h1  text-block__secondary-h1">Мои управляющие организации</h1>
+                        <p class="text-block__p">Небольшое описание буквально в несколько строк.</p>
+                        <button class="text-block__btn text-block__secondary-btn btn">Подробнее</button>
+                    </div>
+                    <img src="../img/block-img.png" alt="" class="block__img">
+                </div>
+                <div class="grid-blocks__block" style="cursor: auto;">
+                    <div class="block__text-block">
+                        <img src="../img/block-svg-2.svg" alt="" class="text-block__img">
+                        <h1 class="text-block__h1 text-block__secondary-h1">Жалобы и обращения</h1>
+                        <p class="text-block__p">Небольшое описание буквально в несколько строк.</p>
+                        <button class="text-block__btn text-block__secondary-btn btn" onclick="location.href='../html/complaints-and-appeals.html';">Подробнее</button>
+                    </div>
+                </div>
+                <div class="grid-blocks__block">
+                    <div class="block__text-block">
+                        <img src="../img/block-svg-3.svg" alt="" class="text-block__img">
+                        <h1 class="text-block__h1">Опросы</h1>
+                        <p class="text-block__p">Небольшое описание буквально в несколько предложений, занимающие не более трех строк.</p>
+                    </div>
+                </div>
+                <div class="grid-blocks__block">
+                    <div class="block__text-block">
+                        <img src="../img/block-svg-4.svg" alt="" class="text-block__img">
+                        <h1 class="text-block__h1">Общественные обсуждения</h1>
+                        <p class="text-block__p">Небольшое описание буквально в несколько предложений, занимающие не более трех строк.</p>
+                    </div>
+                </div>
+                <div class="grid-blocks__block">
+                    <div class="block__text-block">
+                        <img src="../img/block-svg-5.svg" alt="" class="text-block__img">
+                        <h1 class="text-block__h1">Рейтинги и исполнители</h1>
+                        <p class="text-block__p">Небольшое описание буквально в несколько предложений, занимающие не более трех строк.</p>
+                    </div>
+                </div>
+                <div class="grid-blocks__block">
+                    <div class="block__text-block">
+                        <img src="../img/block-svg-6.svg" alt="" class="text-block__img">
+                        <h1 class="text-block__h1">Уполномоченный по делам человека в Рязанской обл.</h1>
+                        <p class="text-block__p">Небольшое описание буквально в несколько предложений, занимающие не более трех строк.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="statistics">
+            <div class="container statistics__container">
+                <img src="../img/img.png" alt="" class="statistics__img">
+                <div class="statistics__block">
+                    <div class="block__info">
+                        <div class="info__element">
+                            <h1 class="element__h1">24 643</h1>
+                            <p class="element__p">пользователей</p>
+                        </div>
+                        <div class="info__element">
+                            <h1 class="element__h1">5 626</h1>
+                            <p class="element__p">опубликовано обращений</p>
+                        </div>
+                        <div class="info__element">
+                            <h1 class="element__h1">3 028</h1>
+                            <p class="element__p">решено проблем</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__main-content">
+                <div class="main-content__logo-block">
+                    <a href="../html/index.html" class="logo-block__a"><img src="../img/logo-dark.svg" alt=""></a>
+                    <h2 class="main-content__h2 logo-block__h2">Информационная экосистема Рязанской области —  Наш Дом Рязань</h2>
+                </div>
+                <div class="main-content__elements">
+                    <div class="elements__block">
+                        <h2 class="main-content__h2 block__h2">Разделы сайта</h2>
+                        <div class="block__elements">
+                            <div class="elements__element">
+                                <p class="block__p"><a href="">Управляющие организации дома</a></p>
+                                <p class="block__p"><a href="">Рейтинги и исполнители</a></p>
+                                <p class="block__p"><a href="">Жалобы и обращения</a></p>
+                                <p class="block__p"><a href="">Общественные обсуждения</a></p>
+                                <p class="block__p"><a href="">Опросы</a></p>
+                            </div>
+                            <div class="elements__element">
+                                <p class="block__p"><a href="">Реест организаций-партнеров</a></p>
+                                <p class="block__p"><a href="">Информация об УПЧ</a></p>
+                                <p class="block__p"><a href="">Запись к УПЧ</a></p>
+                                <p class="block__p"><a href="">Написать уполномоченному</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elements__block">
+                        <h2 class="main-content__h2 block__h2">Помощь</h2>
+                        <div class="block__elements">
+                            <div class="elements__element">
+                                <p class="block__p"><a href="">Написать в техподдержку</a></p>
+                                <p class="block__p"><a href="">Вопросы и ответы</a></p>
+                                <p class="block__p"><a href="">Пользовательское соглашение</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__line"></div>
+            <div class="footer__copyright">
+                <div class="copyright__text">
+                    <p class="text__p">
+                        Copyright © 2022 Nash Dom Inc. 
+                        <br>
+                        All rights reserved.
+                    </p>
+                </div>
+                <div class="copyright__download">
+                    <a href="" class="download__a"><img src="../img/download-AppStore-img.png" alt="" class="download__img"></a>
+                    <a href="" class="download__a"><img src="../img/download-GooglePlay-img.png" alt="" class="download__img"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/index.js"></script>
+    <script src="../js/header.js"></script>
+</body>
+</html>
