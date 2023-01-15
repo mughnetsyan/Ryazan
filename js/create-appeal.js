@@ -76,6 +76,45 @@ function createFormFile(name, size, date) {
 `
 }
 
+fileInput.addEventListener('change', function() {
+    var file = fileInput.files[0];
+    var fileType = file.type.split("/")[(file.type.split("/")).length - 1]
+
+    files.push(file)
+
+    var conditionForFileType = (fileType == "png" || fileType == "jpg" || fileType == "svg" || fileType == "jpeg")
+
+    if(conditionForFileType) {
+        var reader = new FileReader();
+
+        reader.readAsDataURL(file);
+
+        reader.addEventListener('load', function() {
+            var element = createImagesElement(file.name, reader.result)
+            formImages.innerHTML += element;
+        })
+    } else {
+        switch(true) {
+            case(file.name.length >= 45) : var name = shortenStr(file.name, false); break;
+            case(file.name.split(' ').length > 4) : var name = shortenStr(file.name, true); break;
+            default : var name = file.name
+        }
+
+        switch(false) {
+            case(convertDecimals(file.size, 3).toFixed(1) == 0.0) : var size = `${convertDecimals(file.size, 3).toFixed(1)} ГБ`; break;
+            case(convertDecimals(file.size, 2).toFixed(1) == 0.0) : var size = `${convertDecimals(file.size, 2).toFixed(1)} МБ`; break;
+            case(convertDecimals(file.size, 1).toFixed(1) == 0.0) : var size = `${convertDecimals(file.size, 1).toFixed(1)} КБ`;
+        }
+
+        var date = getFullDate(file)
+
+        var element = createFormFile(name, size, date)
+        formFiles.innerHTML += element
+    }
+
+    checkDownloadedFiles()
+})
+
 formImages.addEventListener('click', function(e) {
     if(!e.target.classList.contains("form-images")) {
         if(e.target.classList.contains("images__delete-btn")) {
@@ -100,46 +139,6 @@ formImages.addEventListener('click', function(e) {
 
         checkDownloadedFiles()
     }
-})
-
-fileInput.addEventListener('change', function() {
-    var reader = new FileReader();
-
-    var file = fileInput.files[0];
-    var fileType = file.type.split("/")[(file.type.split("/")).length - 1]
-
-    files.push(file)
-
-    var conditionForFileType = (fileType == "png" || fileType == "jpg" || fileType == "svg" || fileType == "jpeg")
-
-    if(conditionForFileType) {
-        reader.readAsDataURL(file);
-
-        reader.addEventListener('load', function() {
-            var element = createImagesElement(file.name, reader.result)
-            formImages.innerHTML += element;
-        })
-
-    } else {
-        switch(true) {
-            case(file.name.length >= 45) : var name = shortenStr(file.name, false); break;
-            case(file.name.split(' ').length > 4) : var name = shortenStr(file.name, true); break;
-            default : var name = file.name
-        }
-
-        switch(false) {
-            case(convertDecimals(file.size, 3).toFixed(1) == 0.0) : var size = `${convertDecimals(file.size, 3).toFixed(1)} ГБ`; break;
-            case(convertDecimals(file.size, 2).toFixed(1) == 0.0) : var size = `${convertDecimals(file.size, 2).toFixed(1)} МБ`; break;
-            case(convertDecimals(file.size, 1).toFixed(1) == 0.0) : var size = `${convertDecimals(file.size, 1).toFixed(1)} КБ`;
-        }
-
-        var date = getFullDate(file)
-
-        var element = createFormFile(name, size, date)
-        formFiles.innerHTML += element
-    }
-
-    checkDownloadedFiles()
 })
 
 formFiles.addEventListener('click', function(e) {
