@@ -34,6 +34,18 @@ function checkDownloadedFiles() {
     }
 }
 
+function checkDownloadedImages() {
+    var imagesCount = 0
+
+    formImages.childNodes.forEach(child => { if(child.nodeName == "DIV") imagesCount += 1 })
+
+    if(imagesCount == 0) {
+        formImages.classList.remove("mb-20")
+    } else {
+        formImages.classList.add("mb-20")
+    }
+}
+
 function getFullDate(file) {
     return `${(new Date(file.lastModified)).getDate()}.${(new Date(file.lastModified)).getMonth() + 1}.${(new Date(file.lastModified)).getFullYear()}`
 }
@@ -92,7 +104,10 @@ fileInput.addEventListener('change', function() {
         reader.addEventListener('load', function() {
             var element = createImagesElement(file.name, reader.result)
             formImages.innerHTML += element;
+
+            checkDownloadedImages()
         })
+
     } else {
         switch(true) {
             case(file.name.length >= 45) : var name = shortenStr(file.name, false); break;
@@ -110,6 +125,8 @@ fileInput.addEventListener('change', function() {
 
         var element = createFormFile(name, size, date)
         formFiles.innerHTML += element
+
+        checkDownloadedImages()
     }
 
     checkDownloadedFiles()
@@ -135,6 +152,7 @@ formImages.addEventListener('click', function(e) {
 
         setTimeout(function() {
             element.parentElement.parentElement.removeChild(element.parentElement);
+            checkDownloadedImages()
         }, 200)
 
         checkDownloadedFiles()
