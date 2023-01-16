@@ -31,29 +31,27 @@ scrollBtns.forEach(btn => {
 
         var index = element.classList[1].slice(-1);
 
-
-
         if(index == "2") {
             horizontalScroll(element, 1000)
 
-            element.classList.add("d-none")
+            element.classList.add("opacity-0")
             element.previousElementSibling.classList.remove("d-none")
 
             setTimeout(function() {
-                element.classList.add("opacity-0")
+                element.classList.add("d-none")
                 element.previousElementSibling.classList.remove("opacity-0")
-            }, 0)
+            }, 200)
 
         } else {
             horizontalScroll(element, 0)
 
-            element.classList.add("d-none")
+            element.classList.add("opacity-0")
             element.nextElementSibling.classList.remove("d-none")
 
             setTimeout(function() {
-                element.classList.add("opacity-0")
+                element.classList.add("d-none")
                 element.nextElementSibling.classList.remove("opacity-0")
-            },0)
+            }, 200)
         }
 
     })
