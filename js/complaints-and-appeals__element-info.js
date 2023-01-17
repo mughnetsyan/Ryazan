@@ -8,14 +8,11 @@ let modalWindow = document.querySelector('.modal-window')
 let copyBtn = document.querySelector("#copy-btn")
 
 function horizontalScroll(e, value) {
-    element = e.parentElement.parentElement.getElementsByTagName('div')[0]
-
-    element.scrollTo({
+    e.parentElement.parentElement.getElementsByTagName('div')[0]
+    .scrollTo({
             left: value,
             behavior: 'smooth'
     });
-
-    
 }
 
 

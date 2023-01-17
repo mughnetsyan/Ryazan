@@ -1,4 +1,3 @@
-
 let mainDropdownContent = document.querySelector('#main-dropdown-content');
 let mainDropdownBtn = document.querySelector('#main-dropdown-btn')
 
@@ -14,13 +13,11 @@ let scrollBtns = document.querySelectorAll('.img-block__btn')
 
 
 function horizontalScroll(e, value) {
-    element = e.parentElement.parentElement.getElementsByTagName('div')[0]
-
-    element.scrollTo({
+    e.parentElement.parentElement.getElementsByTagName('div')[0]
+    .scrollTo({
             left: value,
             behavior: 'smooth'
     });
-
 }
 
 
@@ -35,7 +32,6 @@ scrollBtns.forEach(btn => {
         }
 
         var index = element.classList[1].slice(-1);
-
 
         if(index == "2") {
             horizontalScroll(element, 1000)

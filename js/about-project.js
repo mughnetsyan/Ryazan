@@ -15,6 +15,8 @@ function changeSlideByClick() {
             sliderBtns[i].classList.add("slider__active-btn")
             sliderSlides[i].classList.add("slider__active-slide")
             
+            if(counter == sliderBtns.length) { counter = 1} else { counter = i + 1 } 
+
         } else {
             setTimeout(function() {
                 sliderSlides[i].classList.remove("slider__visible")
@@ -24,8 +26,8 @@ function changeSlideByClick() {
         } 
     }
 
-    clearInterval(intervalId)
-    intervalId = setInterval(changeSlideByTime, 3000)
+    clearTimeout(intervalId)
+    intervalId = setTimeout(changeSlideByTime, 3000)
 }
 
 function changeSlideByTime() {
@@ -47,8 +49,8 @@ function changeSlideByTime() {
     }
     if(counter == sliderBtns.length) { counter = 1} else { counter++ } 
 
-    clearInterval(intervalId)
-    intervalId = setInterval(changeSlideByTime, 3000)
+    clearTimeout(intervalId)
+    intervalId = setTimeout(changeSlideByTime, 3000)
 }
 
 
@@ -62,4 +64,4 @@ for(var i = 0; i < sliderBtns.length; i++) {
     sliderSlides[i].onclick = changeSlideByTime;
 }
 
-let intervalId = setInterval(changeSlideByTime, 0)
+let intervalId = setTimeout(changeSlideByTime, 0)
