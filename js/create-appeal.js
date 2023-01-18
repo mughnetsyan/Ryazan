@@ -184,27 +184,27 @@ formFiles.addEventListener('click', function(e) {
     }
 })
 
-document.addEventListener('paste', function(e) {
-    if(e.clipboardData.items[0].getAsFile() == null) return
+// document.addEventListener('paste', function(e) {
+//     if(e.clipboardData.items[0].getAsFile() == null) return
     
-    var file = e.clipboardData.items[0].getAsFile();
+//     var file = e.clipboardData.items[0].getAsFile();
 
-    files.push(file)
-    console.log(file.type.indexOf("image"))
-    if(file.type.indexOf("image") === 0) {
-        var reader = new FileReader();
+//     files.push(file)
+//     console.log(file.type.indexOf("image"))
+//     if(file.type.indexOf("image") === 0) {
+//         var reader = new FileReader();
 
-        reader.readAsDataURL(file)
+//         reader.readAsDataURL(file)
 
-        reader.addEventListener('load', function() {
-            var element = createImagesElement(file.name, reader.result)
-            formImages.innerHTML += element;
+//         reader.addEventListener('load', function() {
+//             var element = createImagesElement(file.name, reader.result)
+//             formImages.innerHTML += element;
 
-            console.log(formImages)
+//             console.log(formImages)
 
-            checkDownloadedImages()
-        })
-    }
+//             checkDownloadedImages()
+//         })
+//     }
     
-    checkDownloadedFiles()
-})
+//     checkDownloadedFiles()
+// })
