@@ -20,6 +20,7 @@ function convertDecimals(bytes, power) {
     return bytes / Math.pow(1024, power);
 }
 
+
 function checkDownloadedFiles() {
     if(files.length > 0) {
         downloadedFiles.classList.remove("d-none")
@@ -35,6 +36,7 @@ function checkDownloadedFiles() {
 }
 
 function checkDownloadedImages() {
+
     var imagesCount = 0
 
     formImages.childNodes.forEach(child => { if(child.nodeName == "DIV") imagesCount += 1 })
@@ -90,13 +92,10 @@ function createFormFile(name, size, date) {
 
 fileInput.addEventListener('change', function() {
     var file = fileInput.files[0];
-    var fileType = file.type.split("/")[(file.type.split("/")).length - 1]
 
     files.push(file)
 
-    var conditionForFileType = (fileType == "png" || fileType == "jpg" || fileType == "svg" || fileType == "jpeg")
-
-    if(conditionForFileType) {
+    if(file.type.indexOf("image") === 0) {
         var reader = new FileReader();
 
         reader.readAsDataURL(file);
@@ -128,7 +127,7 @@ fileInput.addEventListener('change', function() {
 
         checkDownloadedImages()
     }
-
+    console.log(files)
     checkDownloadedFiles()
 })
 
@@ -183,4 +182,29 @@ formFiles.addEventListener('click', function(e) {
 
         checkDownloadedFiles()
     }
+})
+
+document.addEventListener('paste', function(e) {
+    if(e.clipboardData.items[0].getAsFile() == null) return
+    
+    var file = e.clipboardData.items[0].getAsFile();
+
+    files.push(file)
+    console.log(file.type.indexOf("image"))
+    if(file.type.indexOf("image") === 0) {
+        var reader = new FileReader();
+
+        reader.readAsDataURL(file)
+
+        reader.addEventListener('load', function() {
+            var element = createImagesElement(file.name, reader.result)
+            formImages.innerHTML += element;
+
+            console.log(formImages)
+
+            checkDownloadedImages()
+        })
+    }
+    
+    checkDownloadedFiles()
 })
