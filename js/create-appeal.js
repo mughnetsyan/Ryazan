@@ -20,7 +20,6 @@ function convertDecimals(bytes, power) {
     return bytes / Math.pow(1024, power);
 }
 
-
 function checkDownloadedFiles() {
     if(files.length > 0) {
         downloadedFiles.classList.remove("d-none")
@@ -184,27 +183,25 @@ formFiles.addEventListener('click', function(e) {
     }
 })
 
-// document.addEventListener('paste', function(e) {
-//     if(e.clipboardData.items[0].getAsFile() == null) return
+document.addEventListener('paste', function(e) {
+    var file = e.clipboardData.items[0].getAsFile();
+
+    files.push(file)
+
+    if(file.type.indexOf("image") === 0) {
+        var reader = new FileReader();
+
+        reader.readAsDataURL(file)
+
+        reader.addEventListener('load', function() {
+            var element = createImagesElement(file.name, reader.result)
+            formImages.innerHTML += element;
+
+            console.log(formImages)
+
+            checkDownloadedImages()
+        })
+    }
     
-//     var file = e.clipboardData.items[0].getAsFile();
-
-//     files.push(file)
-//     console.log(file.type.indexOf("image"))
-//     if(file.type.indexOf("image") === 0) {
-//         var reader = new FileReader();
-
-//         reader.readAsDataURL(file)
-
-//         reader.addEventListener('load', function() {
-//             var element = createImagesElement(file.name, reader.result)
-//             formImages.innerHTML += element;
-
-//             console.log(formImages)
-
-//             checkDownloadedImages()
-//         })
-//     }
-    
-//     checkDownloadedFiles()
-// })
+    checkDownloadedFiles()
+})
