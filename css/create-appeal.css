@@ -71,7 +71,6 @@ body {
     display: flex;
     align-items: center;
 }
-
 .btn__img {
     position: absolute;
 
@@ -104,9 +103,17 @@ body {
 .form__btn {
     cursor: pointer;
 }
-.form__input::placeholder {
+.form__input::placeholder, .form__btn::placeholder {
     color: rgba(0, 0, 0, 0.4) !important;
 }
+
+.form__dropdown-content {
+    transition: .3s;
+}
+.form__dropdown-btn {
+
+}
+
 .form__textarea {
     width: 100%;
     height: auto;

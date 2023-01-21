@@ -10,6 +10,12 @@ let formImages = document.querySelector(".form__images")
 // * Элемент с другими файлами, кроме картинок, из fileInput
 let formFiles = document.querySelector(".form__files")
 
+// * Кнопки с выпадающим списком
+let formBtns = document.querySelectorAll(".form__btn")
+
+// * Выпадающие списки для formBtns
+let formDropdownContents = document.querySelectorAll(".form__dropdown-content")
+
 // * Элемент, который является родителем для formImages и formFiles
 let downloadedFiles = document.querySelector("#downloaded-files")
 
@@ -187,4 +193,43 @@ document.addEventListener('paste', function(e) {
             checkFiles()
         })
     }
+})
+
+
+formBtns.forEach(btn => {
+    let formDropdownContent = btn.parentElement.nextElementSibling
+
+    // * Появление выпадающих списков
+    btn.addEventListener('focus', function() {
+        formDropdownContent.classList.remove("d-none")
+        setTimeout(function() {
+            formDropdownContent.classList.remove("opacity-0")
+        }, 150)
+    })
+    // * Исчезновение выпадающих списков
+    btn.addEventListener('blur', function() {
+        formDropdownContent.classList.add("opacity-0")
+        setTimeout(function() {
+            formDropdownContent.classList.add("d-none")
+        }, 150)
+    })
+
+    btn.addEventListener('input', function(e) {
+        let dropdownBtns = Array.prototype.slice.call(formDropdownContent.childNodes)
+            .filter(child => child.nodeName != "#text");
+
+        dropdownBtns.forEach(btn => {
+            if(btn.innerHTML.includes(e.target.value)) {
+                btn.classList.remove("d-none")
+                setTimeout(function() {
+                    btn.classList.remove("opacity-0")
+                }, 150)
+            } else {
+                btn.classList.add("opacity-0")
+                setTimeout(function() {
+                    btn.classList.add("d-none")
+                }, 150)
+            }
+        })
+    })
 })
