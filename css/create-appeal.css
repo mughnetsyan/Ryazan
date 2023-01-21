@@ -13,6 +13,8 @@ body {
     margin: 40px 0 80px 0;
 }
 .main-content__container {
+    min-width: 516px;
+
     display: flex;
     flex-direction: column;
 
@@ -148,6 +150,8 @@ body {
     border: none;
     outline: none;
 
+}
+.images__element:last-child {
 }
 .images__delete-btn {
     position: absolute;
