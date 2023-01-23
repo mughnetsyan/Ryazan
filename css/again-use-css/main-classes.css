@@ -33,3 +33,19 @@ a {
 .opacity-0 {
     opacity: 0 !important;
 }
+
+.hidden {
+    visibility: hidden;
+}
+
+.max-h-0 {
+    max-height: 0;
+}
+
+.rotateX-180deg {
+    transform: rotateX(180deg);
+}
+
+.rotateZ-90deg {
+    transform: rotateZ(90deg);
+}

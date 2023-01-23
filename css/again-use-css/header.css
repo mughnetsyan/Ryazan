@@ -1,8 +1,4 @@
 
-.rotateX-180deg {
-    transform: rotateX(180deg);
-}
-
 .header {
     width: 100%;
     height: 96px;

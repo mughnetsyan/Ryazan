@@ -173,8 +173,6 @@ formFiles.addEventListener('click', function(e) {
 document.addEventListener('paste', function(e) {
     var file = e.clipboardData.items[0].getAsFile();
 
-    console.log(isDuplicate(file))
-
     if(file != null && isDuplicate(file)) { return }
 
     files.push(file)
@@ -197,17 +195,23 @@ document.addEventListener('paste', function(e) {
 
 
 formBtns.forEach(btn => {
-    let formDropdownContent = btn.parentElement.nextElementSibling
+    let formDropdownContent = btn.parentElement.nextElementSibling;
+    let formImg = btn.nextElementSibling;
+    let dropdownBtns = Array.prototype.slice.call(formDropdownContent.querySelectorAll(".form__dropdown-btn:not(.form__dropdown-btn-noresult)"))
 
     // * Появление выпадающих списков
     btn.addEventListener('focus', function() {
+        formImg.classList.add("rotateZ-90deg")
+
         formDropdownContent.classList.remove("d-none")
         setTimeout(function() {
             formDropdownContent.classList.remove("opacity-0")
-        }, 150)
+        }, 150 )
     })
     // * Исчезновение выпадающих списков
     btn.addEventListener('blur', function() {
+        formImg.classList.remove("rotateZ-90deg")
+
         formDropdownContent.classList.add("opacity-0")
         setTimeout(function() {
             formDropdownContent.classList.add("d-none")
@@ -215,21 +219,28 @@ formBtns.forEach(btn => {
     })
 
     btn.addEventListener('input', function(e) {
-        let dropdownBtns = Array.prototype.slice.call(formDropdownContent.childNodes)
-            .filter(child => child.nodeName != "#text");
+        dropdownBtns.forEach(dropDownbtn => {
+            var btnText = dropDownbtn.innerHTML.toLowerCase().replace(/ /g,'')
+            var inputText = e.target.value.toLowerCase().replace(/ /g,'')
 
-        dropdownBtns.forEach(btn => {
-            if(btn.innerHTML.includes(e.target.value)) {
-                btn.classList.remove("d-none")
+            if(btnText.includes(inputText)) {
+                dropDownbtn.classList.remove("d-none")
                 setTimeout(function() {
-                    btn.classList.remove("opacity-0")
+                    dropDownbtn.classList.remove("opacity-0")
                 }, 150)
             } else {
-                btn.classList.add("opacity-0")
+                dropDownbtn.classList.add("opacity-0")
                 setTimeout(function() {
-                    btn.classList.add("d-none")
+                    dropDownbtn.classList.add("d-none")
                 }, 150)
             }
         })
     })
+
+    dropdownBtns.forEach(dropDownbtn => {
+        dropDownbtn.addEventListener('click', function() {
+            btn.value = dropDownbtn.innerHTML;
+        })
+    })
 })
+
