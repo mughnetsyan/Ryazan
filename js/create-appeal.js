@@ -22,12 +22,62 @@ let downloadedFiles = document.querySelector("#downloaded-files")
 // * Массив файлов
 let files = [];
 
-function removeFile(file) {
-    for(var i in files) {
-        if(file.dataset.name === files[i].name) {
-            files.splice(i, 1)
+function addFile(file) {
+    
+    files.push(file)
+
+    if(file.type.indexOf("image") === 0) {
+        var reader = new FileReader();
+
+        reader.readAsDataURL(file)
+
+        reader.addEventListener('load', function() {
+            var element = createImagesElement(file.name, reader.result)
+            formImages.innerHTML += element;
+
+            console.log(formImages)
+
+            checkFiles()
+        })
+    } else {
+        switch(true) {
+            case(file.name.length >= 45) : var name = getShortenedString(file.name, false); break;
+            case(file.name.split(' ').length > 4) : var name = getShortenedString(file.name, true); break;
+            default : var name = file.name;
         }
+
+        switch(true) {
+            case(convertDecimals(file.size, 3).toFixed(1) != 0.0) : var size = `${convertDecimals(file.size, 3).toFixed(1)} ГБ`; break;
+            case(convertDecimals(file.size, 2).toFixed(1) != 0.0) : var size = `${convertDecimals(file.size, 2).toFixed(1)} МБ`; break;
+            case(convertDecimals(file.size, 1).toFixed(1) != 0.0) : var size = `${convertDecimals(file.size, 1).toFixed(1)} КБ`;
+        }
+
+        var fullName = file.name;
+
+        var date = getFullDate(file)
+
+        formFiles.innerHTML +=  createFormFile(fullName, name, size, date)
+        checkFiles()
     }
+}
+
+function removeFile(e, containerClassName, btnClassName, imgClassName) {
+    if(!e.target.classList.contains(containerClassName)) {
+        switch(true) {
+            case(e.target.classList.contains(btnClassName)) : var element = e.target.parentElement; break;
+            case(e.target.classList.contains(imgClassName)) : var element = e.target.parentElement.parentElement; break;
+            default: return
+        }
+        
+        for(var i in files) {
+            if(element.dataset.name === files[i].name) {
+                files.splice(i, 1)
+            }
+        }
+        
+        element.classList.add("opacity-0");
+        
+        setTimeout(function() { element.parentElement.removeChild(element); checkFiles() }, 200) }
 }
 
 function isDuplicate(file) {
@@ -100,104 +150,36 @@ function createFormFile(fullName, name, size, date) {
 fileInput.addEventListener('change', function() {
     var file = fileInput.files[0];
 
-    if(isDuplicate(file)) { return }
+    if(isDuplicate(file)) return
 
-    files.push(file)
-
-    if(file.type.indexOf("image") === 0) {
-        var reader = new FileReader();
-
-        reader.readAsDataURL(file);
-
-        reader.addEventListener('load', function() {
-            formImages.innerHTML += createImagesElement(file.name, reader.result);
-            checkFiles()
-        })
-    } else {
-        switch(true) {
-            case(file.name.length >= 45) : var name = getShortenedString(file.name, false); break;
-            case(file.name.split(' ').length > 4) : var name = getShortenedString(file.name, true); break;
-            default : var name = file.name;
-        }
-
-        switch(true) {
-            case(convertDecimals(file.size, 3).toFixed(1) != 0.0) : var size = `${convertDecimals(file.size, 3).toFixed(1)} ГБ`; break;
-            case(convertDecimals(file.size, 2).toFixed(1) != 0.0) : var size = `${convertDecimals(file.size, 2).toFixed(1)} МБ`; break;
-            case(convertDecimals(file.size, 1).toFixed(1) != 0.0) : var size = `${convertDecimals(file.size, 1).toFixed(1)} КБ`;
-        }
-
-        var fullName = file.name;
-
-        var date = getFullDate(file)
-
-        formFiles.innerHTML +=  createFormFile(fullName, name, size, date)
-        checkFiles()
-    }
+    addFile(file)
     
     fileInput.value = ""
 })
 
 formImages.addEventListener('click', function(e) {
-    if(!e.target.classList.contains("form-images")) {
-        switch(true) {
-            case(e.target.classList.contains("images__delete-btn")) : var element = e.target.parentElement; break;
-            case(e.target.classList.contains("images__delete-img")) : var element = e.target.parentElement.parentElement; break;
-            default: return
-        }
-
-        removeFile(element)
-
-        element.classList.add("opacity-0");
-
-        setTimeout(function() { element.parentElement.removeChild(element); checkFiles() }, 200)
-    }
-
+    removeFile(e, "form-images", "images__delete-btn", "images__delete-img")
 })
 
 formFiles.addEventListener('click', function(e) {
-    if(!e.target.classList.contains("form__files")) {
-        switch(true) {
-            case(e.target.classList.contains("file__delete-btn")) : var element = e.target.parentElement; break;
-            case(e.target.classList.contains("file__delete-img")) : var element = e.target.parentElement.parentElement; break;
-            default: return
-        }
-
-        removeFile(element)
-
-        element.classList.add("opacity-0")
-
-        setTimeout(function() { element.parentElement.removeChild(element); checkFiles() }, 300)
-    }
+    removeFile(e, "form__files", "file__delete-btn", "file__delete-img")
 })
 
 document.addEventListener('paste', function(e) {
     var file = e.clipboardData.items[0].getAsFile();
+    
+    if(file == null || isDuplicate(file)) return
 
-    if(file != null && isDuplicate(file)) { return }
-
-    files.push(file)
-
-    if(file.type.indexOf("image") === 0) {
-        var reader = new FileReader();
-
-        reader.readAsDataURL(file)
-
-        reader.addEventListener('load', function() {
-            var element = createImagesElement(file.name, reader.result)
-            formImages.innerHTML += element;
-
-            console.log(formImages)
-
-            checkFiles()
-        })
-    }
+    addFile(file)
 })
 
 
 formBtns.forEach(btn => {
     let formDropdownContent = btn.parentElement.nextElementSibling;
     let formImg = btn.nextElementSibling;
+
     let dropdownBtns = Array.prototype.slice.call(formDropdownContent.querySelectorAll(".form__dropdown-btn:not(.form__dropdown-btn-noresult)"))
+
 
     // * Появление выпадающих списков
     btn.addEventListener('focus', function() {
@@ -208,6 +190,8 @@ formBtns.forEach(btn => {
             formDropdownContent.classList.remove("opacity-0")
         }, 150 )
     })
+
+    
     // * Исчезновение выпадающих списков
     btn.addEventListener('blur', function() {
         formImg.classList.remove("rotateZ-90deg")
@@ -217,6 +201,7 @@ formBtns.forEach(btn => {
             formDropdownContent.classList.add("d-none")
         }, 150)
     })
+
 
     btn.addEventListener('input', function(e) {
         dropdownBtns.forEach(dropDownbtn => {
