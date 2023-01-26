@@ -138,6 +138,8 @@ body {
 .btn-active {
     background: #ffcc33;
 }
+/* ? Можно удалить */
+
 .dropdown-content__secondary-btn {
     width: calc(100% - 8px);
     margin-bottom: 4px;
@@ -145,6 +147,8 @@ body {
 .dropdown-content__secondary-btn:last-child {
     margin-bottom: 0;
 }
+
+/* ? */
 .dropdown-content__select-block {
     position: relative;
     max-height: 0;
@@ -361,8 +365,6 @@ body {
     border-radius: 8px;
 }
 
-.element__secondary-block {
-}
 .main-content__page-btns {
 }
 

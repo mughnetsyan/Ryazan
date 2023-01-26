@@ -1,0 +1,286 @@
+body {
+    background: #f6f6f6;
+    scroll-behavior: auto;
+}
+.main {
+    margin-top: 96px;
+    margin-bottom: 64px;
+}
+
+
+
+
+.section-path {
+    background: #fafafa;
+}
+
+.main-header {
+    background: #fff;
+}
+.main-header__container {
+    padding: 24px 0 20px;
+}
+.main-header__main-block {
+    display: flex;
+    justify-content: space-between;
+}
+.main-header__text-block {
+    margin-bottom: 24px;
+}
+.main-header__h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+
+    color: #000000;
+
+    margin-bottom: 8px;
+}
+.main-header__p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+
+    color: #000000;
+
+    opacity: 0.6;
+}
+.main-header__btn {
+    align-self: flex-start;
+
+    background: #ffcc33;
+
+    padding: 12px 24px;
+}
+
+.main-header__filter-block {
+    display: flex;
+    justify-content: space-between;
+}
+.main-header__filters {
+    display: flex;
+}
+.main-header__filter-btn {
+    background: #F6F6F6;
+
+    transition: .3s;
+
+    padding: 4px 12px;
+    margin-left: 8px;
+}
+.main-header__filter-btn:hover {
+    background: #ffcc33;
+}
+.main-header__filter-btn:first-child {
+    margin: 0;
+}
+.filter-btn__img {
+    margin-left: 10px;
+}
+
+
+/*! Main-Content */
+
+.main-content {
+    margin-top: 32px;
+}
+.main-content__container {
+}
+
+.main-content__elems {
+    margin-bottom: 48px;
+}
+.main-content__element {
+    
+    display: flex;
+    margin-bottom: 32px;
+}
+.main-content__element:last-child {
+    margin-bottom: 0;
+}
+.element__main-block {
+    background: #fff;
+
+    border-radius: 12px;
+
+    padding: 24px;
+}
+
+.element__text-block {
+    margin-bottom: 24px;
+}
+.text-block__h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+
+    color: #000000;
+
+    margin-bottom: 12px;
+}
+.text-block__p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+
+    color: #1B1400;
+
+    opacity: 0.8;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+.element__btn {
+    padding: 12px 24px;
+    background: #FFCC33;
+    border-radius: 8px;
+}
+
+
+.element__secondary-block {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+
+    min-width: 330px;
+
+    background: #fff;
+
+    border-radius: 12px;
+
+    margin-left: 30px;
+    padding: 24px;
+}
+.secondary-block__action-block {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.action-block__text-block {
+    
+}
+
+.action-block__h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+
+    color: #000000;
+}
+.action-block__p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+
+    color: #000000;
+
+    opacity: 0.6;
+}
+.action-block__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between !important;
+
+    background: #F6F6F6;
+    border-radius: 8px;
+
+
+    font-style: normal;
+    font-weight: 500 !important;
+    font-size: 14px;
+
+    letter-spacing: 0.02em;
+
+    color: rgba(27, 20, 0, 0.6) !important;
+
+    padding: 4px 8px;
+}
+.action-block__btn > img {
+    margin-right: 6px;
+}
+
+.secondary-block__info-block {
+}
+.info-block__text-block {
+    margin-bottom: 24px;
+}
+.info-block__text-block:last-child {
+    margin-bottom: 0;
+}
+.info-block__h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+
+    color: rgba(27, 20, 0, 0.4);
+
+    margin-bottom: 2px;
+}
+.info-block__p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+
+    color: #000000;
+}
+
+.main-content__page-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content__page-btns button:first-child img{
+    transform: rotate(90deg);
+} 
+
+.main-content__page-btns button:last-child img{
+    transform: rotate(-90deg);
+} 
+
+.page-btns__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 8px;
+    
+    color: #1B1400;
+
+    transition: .2s;
+}
+
+.page-btns__btn:hover {
+    background: #FFCC33;
+}
+
+.page-btns__side-btn {
+}
+.page-btns__main-btns {
+    display: flex;
+    font-size: 0;
+
+    margin-left: 12px;
+    margin-right: 12px;
+}
+.page-btns__main-btn {
+    margin-left: 4px;
+}
+
+.page-btns__main-btn:first-child {
+    margin-left: 0;
+}
+
+.btn-active {
+    background: #FFCC33;
+}

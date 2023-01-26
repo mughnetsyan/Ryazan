@@ -79,6 +79,8 @@ body {
 
     user-select: none;
     transition: .3s;
+    
+    cursor: pointer;
 
     right: 16px;
 }
@@ -107,6 +109,9 @@ body {
 .form__btn {
     cursor: pointer;
 }
+/* .form__btn-focused {
+    
+} */
 .form__input::placeholder, .form__btn::placeholder {
     color: rgba(0, 0, 0, 0.4) !important;
 }
