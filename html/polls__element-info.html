@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рязань - Опросы</title>
+
+    <link rel="stylesheet" href="../css/polls__element-info.css">
+    <link rel="stylesheet" href="../css/again-use-css/header.css">
+    <link rel="stylesheet" href="../css/again-use-css/footer.css">
+    <link rel="stylesheet" href="../css/again-use-css/reset.css">
+    <link rel="stylesheet" href="../css/again-use-css/fonts.css">
+    <link rel="stylesheet" href="../css/again-use-css/main-classes.css">
+    <link rel="stylesheet" href="../css/again-use-css/path.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="header__logo-block">
+                <a href="../html/index.html" class="logo-block__a"><img src="../img/logo-colored.svg" alt=""></a>
+                <div class="logo-block__vertical-line"></div>
+                <h1 class="logo-block__h1">Наименование</h1>
+            </div>
+            <div class="header__nav">
+                <a href="../html/about-project.html" class="nav__a">О проекте</a>
+                <div class="dropdown__content d-none opacity-0" id="dropdown__content">
+                    <button class="content__btn btn">Написать в техподдержку</button>
+                    <button class="content__btn btn">Вопросы и ответы</button>
+                    <button class="content__btn btn">Пользовательское соглашение</button>
+                </div>
+                <button class="dropdown__btn" id="dropdown__btn">
+                    Помощь
+                    <img src="../img/chevron.svg" alt=""  class="dropdown__img" id="dropdown__img">
+                </button>
+                <button class="nav__btn btn">
+                    <img src="../img/enter-gosuslugi.svg" alt="" style="margin-right: 8px;">
+                    Войти
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="section-path">
+            <div class="container section-path__container">
+                <div class="section-path__block">
+                    <img src="../img/section-svg.svg" alt="" class="section-path__img">
+                    <p class="section-path__slash section-path__p">/</p>
+                    <h3 class="section-path__p">Обращения</h3>
+                    <p class="section-path__slash section-path__p">/</p>
+                    <h3 class="section-path__p">Создать обращение</h3>
+                </div>
+            </div>
+        </section>
+        <section class="main-element">
+            <div class="container main-element__container">
+                <div class="element__main-block">
+                    <div class="main-block__info">
+                        <h1 class="info__h1">Благоустройство Верхнего городского <br> парка</h1>
+                        <p class="main-block__p info__p">
+                            Уважаемые жители города Рязани!
+                            <br><br>
+                            Предлагаем Вам принять участие в рейтинговом голосовании по определению видов первоочередных работ по благоустройству в 2021 году парков, 
+                            включенных в федеральную программу «Формирование комфортной городской среды» Национальный проект «Жильё и городская среда» 
+                            <br><br>
+                            Примечание: 
+                            <br>
+                            - Период проведения электронного голосования: с 5.10 по 09.10.2020 до 18.00. <br>
+                            - К голосованию приглашаются жители города Рязани, достигшие 14-летнего возраста. <br>
+                            - Количество выбранных вариантов по каждому парку не ограничено. <br>
+                            - Дополнительные предложения могут быть отражены в ленте комментариев
+                        </p>
+                    </div>
+
+                    <hr class="element__hr main__hr">
+
+                    <div class="main-block__poll">
+                        <div class="poll__info">
+                            <h1 class="main-block__h1 poll__h1">Опрос</h1>
+                            <p class="main-block__p poll__p">Выберите основные возможности карты жителя (не более трех), <br> которые для Вас важны в первую очередь:</p>
+                        </div>
+                        <div class="poll__list">
+                            <div class="list__item">
+                                <input type="checkbox" name="" id="1-1" class="item__input d-none">
+                                <label for="1-1" class="item__label">1</label>
+
+                                <input type="checkbox" name="" id="1-2" class="item__input d-none">
+                                <label for="1-2" class="item__label">2</label>
+
+                                <input type="checkbox" name="" id="1-3" class="item__input d-none">
+                                <label for="1-3" class="item__label">3</label>
+
+                                <input type="checkbox" name="" id="1-4" class="item__input d-none">
+                                <label for="1-4" class="item__label">4</label>
+
+                                <input type="checkbox" name="" id="1-5" class="item__input d-none">
+                                <label for="1-5" class="item__label">5</label>
+                            </div>
+                            <!-- <div class="list__item">
+                                <input type="checkbox" name="" id="2-1" class="item__input d-none">
+                                <label for="2-1" class="item__label">1</label>
+
+                                <input type="checkbox" name="" id="2-2" class="item__input d-none">
+                                <label for="2-2" class="item__label">2</label>
+
+                                <input type="checkbox" name="" id="2-3" class="item__input d-none">
+                                <label for="2-3" class="item__label">3</label>
+
+                                <input type="checkbox" name="" id="2-4" class="item__input d-none">
+                                <label for="2-4" class="item__label">4</label>
+
+                                <input type="checkbox" name="" id="2-5" class="item__input d-none">
+                                <label for="2-5" class="item__label">5</label>
+                            </div> -->
+                        </div>
+                        <div class="poll__action-block">
+                            <p class="poll__progress">Вопрос 1 из 10</p>
+                            <button class="btn poll__btn">Далее</button>
+                        </div>
+                    </div>
+
+                    <hr class="element__hr main__hr">
+
+                    <div class="main-block__comments">
+                        <h1 class="main-block__h1 comments__h1">Комментарии</h1>
+                        <div class="comments__writing-area">
+                            <textarea type="text" class="comments__textarea" placeholder="Напишите свой комментарий"></textarea>
+                            <hr class="element__hr comments__hr">
+                            <div class="comments__action-block">
+                                <button class="btn comments__emoji-btn">
+                                    <img src="../img/emoji.svg" alt="">
+                                </button>
+                                <button class="btn comments__submit-btn">Отправить</button>
+                            </div>
+                        </div>
+                        <div class="comments__elements">
+                            <div class="comments__comment">
+                                <div class="comment__info">
+                                    <h1 class="comment__h1">Михеев Павел</h1>
+                                    <p class="comment__p">20.08.2022, 12:24</p>
+                                </div>
+                                <p class="main-block__p">
+                                    Во дворе дома по адресу ул. Ленинского комсомола д.34 к.1 установлены мусорные контейнеры, которые регулярно вывозятся. 
+                                    Но также рядом с контейнерами выкидывается крупногабаритный мусор, который не вывозится службами уже 3 недели по состоянию на 20 августа 2022 года.
+                                </p>
+                            </div>
+                            <div class="comments__comment">
+                                <div class="comment__info">
+                                    <h1 class="comment__h1">Михеев Павел</h1>
+                                    <p class="comment__p">20.08.2022, 12:24</p>
+                                </div>
+                                <p class="main-block__p">
+                                    Во дворе дома по адресу ул. Ленинского комсомола д.34 к.1 установлены мусорные контейнеры, которые регулярно вывозятся. 
+                                    Но также рядом с контейнерами выкидывается крупногабаритный мусор, который не вывозится службами уже 3 недели по состоянию на 20 августа 2022 года.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="element__secondary-block">
+                    <div class="secondary-block__main-info">
+                        <div class="secondary-block__text-block">
+                            <h1 class="text-block__h1">5 626</h1>
+                            <p class="text-block__p">Поучаствовало в <br> голосовании</p>
+                        </div>
+                        <div class="text-block__views">
+                            <img src="../img/eye.svg" alt="" class="views__img">
+                            <p class="views__p">252</p>
+                        </div>
+                    </div>
+                    <hr class="element__hr secondary-block__hr"></hr>
+                    <div class="secondary-block__secondary-info">
+                        <div class="secondary-info__item">
+                            <h1 class="secondary-block__h1 secondary-info__h1">ОТКРЫТИЕ ОПРОСА</h1>
+                            <p class="secondary-info__p">21.05.2021</p>
+                        </div>
+                        <div class="secondary-info__item">
+                            <h1 class="secondary-block__h1 secondary-info__h1">ДАТА ЗАВЕРШЕНИЯ</h1>
+                            <p class="secondary-info__p">24.05.2021</p>
+                        </div>
+                        <div class="secondary-info__item">
+                            <h1 class="secondary-block__h1 secondary-info__h1">ДО ОПРОСА ОСТАЛОСЬ</h1>
+                            <p class="secondary-info__p">5 дней</p>
+                        </div>
+                    </div>
+                    <hr class="element__hr secondary-block__hr"></hr>
+                    <div class="secondary-block__results">
+                        <h1 class="secondary-block__h1 results__main-h1">РЕЗУЛЬТАТЫ ОПРОСА</h1>
+                        <div class="results__item">
+                            <h1 class="results__h1">Отчёт профильного блока зампреда правительства Дмитрия Филиппова</h1>
+                            <div class="results__progress-block">
+                                <div class="results__info">
+                                    <p class="results__p">Голосов: 1</p>
+                                    <p class="results__p">3%</p>
+                                </div>
+                                <div class="results__progress">
+                                    <div class="progress__element" style="width: 3%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="element__hr results__hr">
+                        <div class="results__item">
+                            <h1 class="results__h1">Отчёт профильного блока зампреда правительства Дмитрия Филиппова</h1>
+                            <div class="results__progress-block">
+                                <div class="results__info">
+                                    <p class="results__p">Голосов: 22</p>
+                                    <p class="results__p">69%</p>
+                                </div>
+                                <div class="results__progress">
+                                    <div class="progress__element" style="width: 69%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="element__hr results__hr">
+                        <div class="results__item">
+                            <h1 class="results__h1">Отчёт профильного блока зампреда правительства Дмитрия Филиппова</h1>
+                            <div class="results__progress-block">
+                                <div class="results__info">
+                                    <p class="results__p">Голосов: 6</p>
+                                    <p class="results__p">19%</p>
+                                </div>
+                                <div class="results__progress">
+                                    <div class="progress__element" style="width: 19%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__main-content">
+                <div class="main-content__logo-block">
+                    <a href="../html/index.html" class="logo-block__a"><img src="../img/logo-dark.svg" alt=""></a>
+                    <h2 class="main-content__h2 logo-block__h2">Информационная экосистема Рязанской области —  Наш Дом Рязань</h2>
+                </div>
+                <div class="main-content__elements">
+                    <div class="elements__block">
+                        <h2 class="main-content__h2 block__h2">Разделы сайта</h2>
+                        <div class="block__elements">
+                            <div class="elements__element">
+                                <p class="block__p"><a href="">Управляющие организации дома</a></p>
+                                <p class="block__p"><a href="">Рейтинги и исполнители</a></p>
+                                <p class="block__p"><a href="">Жалобы и обращения</a></p>
+                                <p class="block__p"><a href="">Общественные обсуждения</a></p>
+                                <p class="block__p"><a href="">Опросы</a></p>
+                            </div>
+                            <div class="elements__element">
+                                <p class="block__p"><a href="">Реест организаций-партнеров</a></p>
+                                <p class="block__p"><a href="">Информация об УПЧ</a></p>
+                                <p class="block__p"><a href="">Запись к УПЧ</a></p>
+                                <p class="block__p"><a href="">Написать уполномоченному</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elements__block">
+                        <h2 class="main-content__h2 block__h2">Помощь</h2>
+                        <div class="block__elements">
+                            <div class="elements__element">
+                                <p class="block__p"><a href="">Написать в техподдержку</a></p>
+                                <p class="block__p"><a href="">Вопросы и ответы</a></p>
+                                <p class="block__p"><a href="">Пользовательское соглашение</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__line"></div>
+            <div class="footer__copyright">
+                <div class="copyright__text">
+                    <p class="text__p">
+                        Copyright © 2022 Nash Dom Inc. 
+                        <br>
+                        All rights reserved.
+                    </p>
+                </div>
+                <div class="copyright__download">
+                    <a href="" class="download__a"><img src="../img/download-AppStore-img.png" alt="" class="download__img"></a>
+                    <a href="" class="download__a"><img src="../img/download-GooglePlay-img.png" alt="" class="download__img"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/polls__element-info.js" defer></script>
+    <script src="../js/header.js" defer></script>
+</body>
+</html>
