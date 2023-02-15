@@ -96,7 +96,7 @@
                                 <input type="checkbox" name="" id="1-5" class="item__input d-none">
                                 <label for="1-5" class="item__label">5</label>
                             </div>
-                            <!-- <div class="list__item">
+                            <div class="list__item d-none opacity-0">
                                 <input type="checkbox" name="" id="2-1" class="item__input d-none">
                                 <label for="2-1" class="item__label">1</label>
 
@@ -111,15 +111,32 @@
 
                                 <input type="checkbox" name="" id="2-5" class="item__input d-none">
                                 <label for="2-5" class="item__label">5</label>
-                            </div> -->
+                            </div>
+                            <div class="list__item d-none opacity-0">
+                                <input type="checkbox" name="" id="3-1" class="item__input d-none">
+                                <label for="3-1" class="item__label">1</label>
+
+                                <input type="checkbox" name="" id="3-2" class="item__input d-none">
+                                <label for="3-2" class="item__label">2</label>
+
+                                <input type="checkbox" name="" id="3-3" class="item__input d-none">
+                                <label for="3-3" class="item__label">3</label>
+
+                                <input type="checkbox" name="" id="3-4" class="item__input d-none">
+                                <label for="3-4" class="item__label">4</label>
+
+                                <input type="checkbox" name="" id="3-5" class="item__input d-none">
+                                <label for="3-5" class="item__label">5</label>
+                            </div>
                         </div>
                         <div class="poll__action-block">
-                            <p class="poll__progress">Вопрос 1 из 10</p>
+                            <!-- <p class="poll__progress">Вопрос 1 из 3</p> -->
+                            <p class="poll__progress-text"></p>
                             <button class="btn poll__btn">Далее</button>
                         </div>
                     </div>
 
-                    <hr class="element__hr main__hr">
+                    <hr class="element__hr main__hr" id="poll-hr">
 
                     <div class="main-block__comments">
                         <h1 class="main-block__h1 comments__h1">Комментарии</h1>
@@ -127,9 +144,14 @@
                             <textarea type="text" class="comments__textarea" placeholder="Напишите свой комментарий"></textarea>
                             <hr class="element__hr comments__hr">
                             <div class="comments__action-block">
-                                <button class="btn comments__emoji-btn">
-                                    <img src="../img/emoji.svg" alt="">
-                                </button>
+                                <div class="comments__emojies">
+                                    <button class="btn comments__emoji-btn">
+                                        <img src="../img/emoji.svg" alt="">
+                                    </button>
+                                    <div class="comments__emoji-dropdown-content d-none opacity-0">
+                                        <!-- <div class="btn emoji-select-btn"></div> -->
+                                    </div>
+                                </div>
                                 <button class="btn comments__submit-btn">Отправить</button>
                             </div>
                         </div>

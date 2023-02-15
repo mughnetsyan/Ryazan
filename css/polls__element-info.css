@@ -56,7 +56,12 @@ body {
     margin: 24px 0;
 }
 
+#poll-hr {
+    transition: .3s;
+}
+
 .main-block__poll {
+    transition: .3s;
 }
 .poll__info {
     margin-bottom: 16px;
@@ -80,7 +85,7 @@ body {
 }
 
 .list__item {
-
+    transition: .3s;
 }
 .item__label {
     display: block;
@@ -113,7 +118,7 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-.poll__progress {
+.poll__progress-text {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -157,22 +162,57 @@ body {
 
     letter-spacing: 0.02em;
 
-    color: rgba(0, 0, 0, 0.4);
+    color: #999999;
 }
 .comments__textarea::placeholder {
-    color: rgba(0, 0, 0, 0.4);
+    color: #999999;
 }
 .comments__hr {
     margin: 8px 0;
 }
 .comments__action-block {
+    position: relative;
+
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 .comments__emoji-btn {
     background: transparent;
+
 }
+.comments__emojies {
+}
+
+
+.comments__emoji-dropdown-content {
+    position: absolute;
+    
+    max-height: 125px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px -2px 32px -6px rgba(59, 69, 75, 0.08);
+    border-radius: 8px;
+
+    transition: .3s;
+
+    overflow-y: scroll;
+
+    padding: 12px;
+
+    margin-top: 20px;
+}
+
+.emoji-select-btn {
+    font-size: 18px !important;
+
+    user-select: none;
+    padding: 4px;
+}
+
 .comments__submit-btn {
     font-style: normal;
     font-weight: 400;
